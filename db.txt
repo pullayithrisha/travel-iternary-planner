@@ -1,0 +1,54 @@
+create database Travel;
+use Travel;
+
+create table feedback(username varchar(50),
+feedback varchar(120),
+ratings varchar(10),
+feedback_date varchar(30));
+
+create table BookItinerary(booking_id int,
+username varchar(50),
+package_id varchar(10),
+price varchar(20),
+travel_date varchar(30),
+card_no varchar(20),
+cvv_no varchar(5),
+booking_date varchar(30),
+booking_type varchar(30));
+
+create table Itinerary(package_id int,
+package_name varchar(50),
+package_description varchar(200),
+price varchar(10));
+
+create table user_signup(username varchar(50) primary key,
+password varchar(50),
+phone_no varchar(50),
+email varchar(50),
+address varchar(50));
+
+create table transport(transport_id int primary key,
+service_name varchar(50),
+source_location varchar(50),
+destination_location varchar(150),
+departure_time varchar(150),
+expected_reached_time varchar(40),
+price varchar(40));
+
+create table hotel(hotel_id int,
+hotel_name varchar(50),
+room_price varchar(50),
+location varchar(100),
+service_description varchar(50));
+
+create table employee(username varchar(50) primary key,
+password varchar(50),
+phone_no varchar(50),
+email varchar(50),
+address varchar(50));
+
+create table notification(employee_name varchar(50),
+login_date varchar(40),
+login_status varchar(30));
+
+
